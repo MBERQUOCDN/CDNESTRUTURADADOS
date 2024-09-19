@@ -24,3 +24,21 @@ df = pd.DataFrame(
 st.dataframe(df)
 #tabelas fixas
 st.table(df)
+
+
+#Botão
+if st.button('Gerar número aleatório'):
+   st.write(randint(0, 1000000))
+else:
+   st.write('Clique no botão acima')
+#Radio
+chute = st.radio(
+    "por que essa função se chama radio?",
+    ('Opção 1: porque o rádio é um osso muito bonito',
+     'Opção 2: é uma homenagem à Marie Curie',
+     'Opção 3: as opções lembram botões de rádio')
+)
+if chute == 'as opções lembram botões de rádio':
+    st.write('Correto!')
+else:
+    st.write("Incorreto, tente novamente.")
